@@ -3,16 +3,33 @@ import thunk from 'redux-thunk';
 import { cartReducer } from './reducers/cartReducers';
 import {
   orderCreateReducer,
+  orderDeleteReducer,
+  orderDeliverReducer,
   orderDetailsReducer,
+  orderListReducer,
+  orderMineListReducer,
   orderPayReducer,
+  orderSummaryReducer,
 } from './reducers/orderReducers';
 import {
-    productDetailsReducer,
-    productListReducer,
+  productCategoryListReducer,
+  productCreateReducer,
+  productDeleteReducer,
+  productDetailsReducer,
+  productListReducer,
+  productReviewCreateReducer,
+  productUpdateReducer,
   } from './reducers/productReducers';
   import {
+    userAddressMapReducer,
+    userDeleteReducer,
+    userDetailsReducer,
+    userListReducer,
     userRegisterReducer,
     userSigninReducer,
+    userTopSellerListReducer,
+    userUpdateProfileReducer,
+    userUpdateReducer,
   } from './reducers/userReducers';
 
   const initialState = {
@@ -40,6 +57,23 @@ const reducer = combineReducers({
   orderCreate: orderCreateReducer,
   orderDetails: orderDetailsReducer,
   orderPay: orderPayReducer,
+  orderMineList: orderMineListReducer,
+  userDetails: userDetailsReducer,
+  userUpdateProfile: userUpdateProfileReducer,
+  userUpdate: userUpdateReducer,
+  productCreate: productCreateReducer,
+  productUpdate: productUpdateReducer,
+  productDelete: productDeleteReducer,
+  orderList: orderListReducer,
+  orderDelete: orderDeleteReducer,
+  orderDeliver: orderDeliverReducer,
+  userList: userListReducer,
+  userDelete: userDeleteReducer,
+  userTopSellersList: userTopSellerListReducer,
+  productCategoryList: productCategoryListReducer,
+  productReviewCreate: productReviewCreateReducer, 
+  userAddressMap: userAddressMapReducer, 
+  orderSummary: orderSummaryReducer,
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
@@ -49,6 +83,3 @@ const store = createStore(
 );
 
 export default store;
-
-
-//PAYPAL_CLIENT_ID=ARsmlclOPL9zOmTLXL8EqCdE7oCzi1VEfPL4udhjbPe5Rk6gciSmRKHkmNh9Ppt7KbUOv2Z_vYOuzbW
